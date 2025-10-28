@@ -52,8 +52,11 @@ class LifecycleViewModel: ViewModel() {
     fun addEvent(name: String) {
         val time  = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
         val color = when (name) {
-            "onCreate", "onStart", "onResume" -> Color.Green
-            "onPause", "onStop" -> Color.Yellow
+            "onCreate" -> Color.Green
+            "onStart"-> Color.Blue
+            "onResume" -> Color.Cyan
+            "onPause"-> Color.Yellow
+            "onStop" -> Color.Magenta
             "onDestroy" -> Color.Red
             else -> Color.Gray
         }
